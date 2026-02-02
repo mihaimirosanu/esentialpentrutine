@@ -1,0 +1,108 @@
+.doterra-introduction {
+  background-color: #f4f7f4; // verde salvie foarte pal
+  padding: 6rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.text-content {
+  .section-title {
+    font-family: var(--font-family-heading);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 600;
+    color: var(--primary-dark);
+    line-height: 1.3;
+    margin-bottom: 2.5rem;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .intro-text {
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+      
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+        line-height: 1.7;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      &.context-note {
+        font-style: italic;
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        margin-top: 2rem;
+        
+        @media (max-width: 768px) {
+          font-size: 1rem;
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.video-content {
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; // 16:9 aspect ratio
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(47, 79, 79, 0.15);
+    
+    .doterra-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}
+
+// Animație de intrare
+.doterra-introduction {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

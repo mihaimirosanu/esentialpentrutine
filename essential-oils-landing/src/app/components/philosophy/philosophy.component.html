@@ -1,0 +1,61 @@
+<section class="philosophy">
+  <div class="nature-background">
+    <div class="flowing-energy">
+      <div class="energy-particle" *ngFor="let particle of energyParticles; let idx = index" 
+           [style.left.%]="particle.x" 
+           [style.top.%]="particle.y" 
+           [style.animation-delay.s]="particle.delay">
+        ●
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="philosophy-content">
+      <div class="wisdom-aura"></div>
+      
+      <p class="philosophy-text animate-wisdom">
+        Dacă aplici pașii și rămâi consecventă, <span class="magic-word">rezultatele apar</span>.
+      </p>
+      <p class="philosophy-text animate-wisdom">
+        Nu prin forță.
+      </p>
+      <p class="philosophy-text animate-wisdom">
+        Nu prin presiune.
+      </p>
+      <p class="philosophy-text highlight animate-wisdom">
+        <b>Ci prin <span class="nature-glow">energia vie a naturii</span>, care lucrează în profunzime
+        atunci când este folosită corect și cu respect față de corp.</b>
+      </p>
+      
+      <div class="philosophy-emphasis animate-emphasis">
+        <div class="emphasis-pair">
+          <p class="emphasis-text contrast">Nu spectaculos.</p>
+          <p class="emphasis-text positive">Ci profund.</p>
+        </div>
+        
+        <div class="emphasis-pair">
+          <p class="emphasis-text contrast">Nu idealizat.</p>
+          <p class="emphasis-text positive">Ci adevărat.</p>
+        </div>
+        
+        <div class="emphasis-pair">
+          <p class="emphasis-text contrast">Nu fantezist.</p>
+          <p class="emphasis-text strong positive">
+            <span class="final-glow">Ci viu, activ, lucrător.</span>
+          </p>
+        </div>
+      </div>
+      
+      <div class="continue-section">
+        <div class="philosophy-divider">
+          <div class="wisdom-pulse"></div>
+        </div>
+        <button class="continue-btn" (click)="scrollToNextSection()">
+          <span class="btn-text">Mai departe</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

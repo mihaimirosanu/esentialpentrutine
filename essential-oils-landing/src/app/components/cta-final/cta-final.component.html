@@ -1,0 +1,46 @@
+<section class="cta-final">
+  <div class="magic-background">
+    <div class="heart-particles">
+      <div class="heart-particle" *ngFor="let heart of heartParticles; let idx = index" 
+           [style.left.%]="heart.x" 
+           [style.top.%]="heart.y" 
+           [style.animation-delay.s]="heart.delay">
+        💚
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="cta-content">
+      <div class="invitation-aura"></div>
+      
+      <h2 class="cta-title animate-invitation">
+        Dacă simți că <span class="destiny-glow">ai ajuns aici cu un motiv</span>, te invit să vorbim.
+      </h2>
+      
+      <div class="cta-description animate-description">
+        <p class="no-pressure">Nu este consultanță agresivă.</p>
+        <p class="no-pressure">Nu este vânzare forțată.</p>
+        <p class="highlight">
+          Este o <span class="living-conversation">conversație vie</span>, 1:1,<br>
+          în care îți ascult <span class="soul-elements">povestea, corpul și nevoile</span><br>
+          și vedem împreună ce ți se potrivește cu adevărat.
+        </p>
+      </div>
+      
+      <div class="whatsapp-cta animate-cta">
+        <div class="connection-ripple"></div>
+        <a 
+          href="https://wa.me/40723665706?text=Salut!%20Am%20vazut%20pagina%20ta%20despre%20uleiuri%20esentiale%20si%20as%20vrea%20sa%20vorbim%20despre%20cum%20ma%20pot%20ajuta%20sa%20imi%20imbunatatesc%20sanatatea%20in%20mod%20natural.%20Multumesc!" 
+          class="whatsapp-button magical-btn"
+          target="_blank"
+          rel="noopener noreferrer">
+          <span class="btn-text">Scrie-mi pe WhatsApp</span>
+        </a>
+        <p class="cta-note">
+          <span class="flow-text">Dă-mi un mesaj și intrăm în fluxul care ți se potrivește.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

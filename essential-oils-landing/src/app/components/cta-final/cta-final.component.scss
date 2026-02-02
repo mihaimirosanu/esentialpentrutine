@@ -1,0 +1,190 @@
+.cta-final {
+  background: linear-gradient(135deg, #f8f9f8 0%, #f0f2f0 100%); // crem/ivoire
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+// Magic background with heart particles
+.magic-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heart-particles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.heart-particle {
+  position: absolute;
+  font-size: 1.2rem;
+  color: #a8d8a8;
+  opacity: 0.7;
+  animation: heartFloat 6s ease-in-out infinite;
+  pointer-events: none;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+@keyframes heartFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) rotate(-3deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-30px) rotate(3deg);
+    opacity: 0.9;
+  }
+}
+
+.cta-content {
+  text-align: center;
+  
+  .cta-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+    font-weight: 600;
+    color: var(--primary-dark);
+    line-height: 2.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.cta-description {
+  margin-bottom: 3rem;
+  
+  p {
+    font-size: 1.4rem;
+    line-height: 2.2;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+    }
+    
+    &.highlight {
+      color: var(--primary-medium);
+      font-weight: 500;
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.whatsapp-cta {
+  .whatsapp-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #6b9b6b 0%, #5a8a5a 100%); // verde măsliniu
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 2.1;
+    letter-spacing: -0.01em;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 16px rgba(107, 155, 107, 0.3);
+    
+    @media (max-width: 768px) {
+      padding: 0.875rem 2rem;
+      font-size: 1.3rem;
+    }
+    
+    &:hover {
+      background: linear-gradient(135deg, #5a8a5a 0%, #4a7a4a 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(107, 155, 107, 0.4);
+      color: #ffffff;
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  .cta-note {
+    font-size: 1.2rem;
+    line-height: 2.1;
+    letter-spacing: -0.01em;
+    color: var(--text-secondary);
+    margin: 0;
+    font-style: italic;
+    
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Animație de intrare
+.cta-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.whatsapp-button {
+  animation: fadeInScale 1s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

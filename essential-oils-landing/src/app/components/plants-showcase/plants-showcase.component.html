@@ -1,0 +1,21 @@
+<section class="plants-showcase">
+  <div class="container">
+    <div class="showcase-content">
+      <h2 class="showcase-title">Produsele sunt instrumente. Nu scopul.</h2>
+      <p class="showcase-subtitle">Scopul este echilibrul tău.</p>
+      
+      <div class="plants-grid">
+        <div class="plant-item" *ngFor="let plant of plants">
+          <div class="plant-image">
+            <img [src]="plant.image" [alt]="plant.name" loading="lazy">
+          </div>
+          <h3 class="plant-name">{{ plant.name }}</h3>
+        </div>
+      </div>
+      
+      <p class="disclaimer">
+        Fără sticle, fără kituri, fără prețuri – doar căi către echilibru.
+      </p>
+    </div>
+  </div>
+</section>

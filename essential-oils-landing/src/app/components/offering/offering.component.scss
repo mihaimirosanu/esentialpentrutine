@@ -1,0 +1,419 @@
+.offering {
+  background-color: #f8f9f8; // crem foarte deschis
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+}
+
+// Sparkle background animation
+.sparkle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.sparkle-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  .sparkle {
+    position: absolute;
+    font-size: 1rem;
+    animation: sparkle 4s ease-in-out infinite;
+    opacity: 0.4;
+    
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    opacity: 0.4;
+  }
+  25% { 
+    transform: scale(1.2) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: scale(0.8) rotate(180deg);
+    opacity: 0.6;
+  }
+  75% { 
+    transform: scale(1.1) rotate(270deg);
+    opacity: 0.9;
+  }
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.offering-content {
+  text-align: center;
+  position: relative;
+  
+  .content-glow {
+    position: absolute;
+    top: -3rem;
+    left: -3rem;
+    right: -3rem;
+    bottom: -3rem;
+    background: radial-gradient(circle, rgba(152, 216, 200, 0.1) 0%, transparent 70%);
+    border-radius: 30px;
+    z-index: -1;
+    animation: contentGlow 6s ease-in-out infinite;
+  }
+  
+  .offering-title {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    line-height: 2.8;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+    
+    .title-glow {
+      background: linear-gradient(45deg, #43a047, #2e7d32, #66bb6a);
+      background-size: 200% 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: titleGradient 3s ease-in-out infinite;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 2.1rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.offering-list {
+  margin-bottom: 4rem;
+}
+
+.offering-item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  opacity: 0;
+  
+  &.animate-item {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+  
+  .item-icon {
+    font-size: 1.5rem;
+    animation: iconBounce 2s ease-in-out infinite;
+    
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+    }
+  }
+  
+  p {
+    font-size: 1.3rem;
+    line-height: 2.1;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin: 0;
+    text-align: left;
+    max-width: 500px;
+    
+    .highlight-word {
+      background: linear-gradient(135deg, #2e7d32, #66bb6a);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+      animation: highlightPulse 2s ease-in-out infinite;
+    }
+    
+    em {
+      color: var(--primary-medium);
+      font-style: normal;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--primary-light);
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+// Linie subțire verde salvie între paragrafe (conform specificațiilor)
+.offering-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-light), var(--primary-medium), var(--primary-light), transparent);
+  margin: 2rem auto;
+  border-radius: 1px;
+  
+  &.animated-divider {
+    animation: dividerExpand 1s ease-out;
+  }
+  
+  @media (max-width: 768px) {
+    margin: 1.5rem auto;
+  }
+}
+
+.offering-promise {
+  opacity: 0;
+  
+  &.animate-promise {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1.2s;
+  }
+  
+  .promise-text {
+    font-size: 1.4rem;
+    line-height: 2.2;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+    }
+    
+    &.highlight {
+      color: var(--primary-medium);
+      font-weight: 500;
+      
+      .promise-glow {
+        background: linear-gradient(45deg, #66bb6a, #2e7d32);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: promiseGlow 3s ease-in-out infinite;
+      }
+    }
+    
+    &:last-of-type {
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  .promise-signature {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    line-height: 2.3;
+    letter-spacing: -0.02em;
+    margin: 0;
+    
+    .signature-shine {
+      background: linear-gradient(90deg, #2F4F4F, #8FBC8F, #2F4F4F);
+      background-size: 200% 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: signatureShine 4s ease-in-out infinite;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// Continue section styling
+.continue-section {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.energy-divider {
+  position: relative;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-light), var(--primary-medium), var(--primary-light), transparent);
+  border-radius: 2px;
+  
+  .energy-pulse {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, rgba(152, 216, 200, 0.8), transparent);
+    border-radius: 3px;
+    animation: energyFlow 3s ease-in-out infinite;
+  }
+}
+
+.continue-btn {
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+  border: none;
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.1;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(143, 188, 143, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin: 2rem auto 0;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(143, 188, 143, 0.4);
+    
+    &::before {
+      left: 100%;
+    }
+    
+    .btn-sparkle {
+      animation: sparkleRotate 0.5s ease;
+    }
+    
+    .btn-arrow {
+      transform: translateX(8px);
+    }
+  }
+  
+  .btn-sparkle {
+    font-size: 1.2rem;
+    animation: twinkle 2s ease-in-out infinite;
+  }
+  
+  .btn-text {
+    font-family: var(--font-family-primary);
+    letter-spacing: 0.5px;
+  }
+  
+  .btn-arrow {
+    transition: transform 0.3s ease;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+}
+
+// Animations
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1.1); }
+}
+
+@keyframes highlightPulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2) saturate(1.3); }
+}
+
+@keyframes dividerExpand {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes titleGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes promiseGlow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2) saturate(1.2); }
+}
+
+@keyframes signatureShine {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 200% 0%; }
+}
+
+@keyframes contentGlow {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.2; }
+}
+
+@keyframes energyFlow {
+  0%, 100% { transform: translateX(-100%); opacity: 0; }
+  50% { transform: translateX(0%); opacity: 1; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+@keyframes sparkleRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

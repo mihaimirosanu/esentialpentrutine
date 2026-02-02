@@ -1,0 +1,30 @@
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="glitter-effect">
+    <div class="glitter-particle" *ngFor="let i of glitterParticles; let idx = index" 
+         [style.left.%]="i.x" 
+         [style.top.%]="i.y" 
+         [style.animation-delay.s]="i.delay">
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="text-backdrop"></div>
+    <div class="hero-text">
+      <h1 class="hero-title animate-in">
+        <span class="line-1">Aici nu găsești promisiuni umflate.</span>
+        <span class="line-2">Găsești lucruri reale, care se simt în corp.</span>
+      </h1>
+      
+      <div class="hero-message animate-in-delayed">
+        <p class="message-line">Îți deschid un spațiu în care corpul tău își poate reaminti cum să se refacă, fără forțare, fără extreme, fără iluzii.</p>
+        <p class="message-line"></p>
+        <p class="message-line highlight">Tot ce creez pornește din practică, din corp și din rezultate care pot fi trăite și observate, </p>
+        <p class="message-line final">nu din teorii frumoase sau promisiuni goale.</p>
+      </div>
+      
+      <div class="scroll-hint animate-in-last">
+        <div class="scroll-arrow" (click)="scrollToNextSection()">↓</div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,257 @@
+.philosophy {
+  background-color: #fbfcfb; // alb cald
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+}
+
+// Nature background with energy particles
+.nature-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.flowing-energy {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  .energy-particle {
+    position: absolute;
+    font-size: 0.8rem;
+    color: var(--primary-medium);
+    animation: energyFlow 8s ease-in-out infinite;
+    opacity: 0.4;
+    
+    @media (max-width: 768px) {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+@keyframes energyFlow {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+    opacity: 0.4;
+  }
+  25% { 
+    transform: translateY(-30px) scale(1.2);
+    opacity: 0.7;
+  }
+  50% { 
+    transform: translateY(-15px) scale(0.8);
+    opacity: 0.5;
+  }
+  75% { 
+    transform: translateY(-45px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.philosophy-content {
+  text-align: center;
+  
+  .philosophy-text {
+    font-size: 1.5rem;
+    line-height: 2.3;
+    letter-spacing: -0.02em;
+    color: #2e7d32;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    &.highlight {
+      color: var(--primary-medium);
+      font-weight: 500;
+      margin-bottom: 3rem;
+      
+      @media (max-width: 768px) {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}
+
+.philosophy-emphasis {
+  margin-top: 3rem;
+  
+  .emphasis-text {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    line-height: 2.1;
+    letter-spacing: -0.02em;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    
+    // Fiecare frază să apară pe rând (animație progresivă)
+    opacity: 0;
+    animation: fadeInSequence 0.8s ease-out forwards;
+    
+    &:nth-child(1) { animation-delay: 0.2s; }
+    &:nth-child(2) { animation-delay: 0.4s; }
+    &:nth-child(3) { animation-delay: 0.6s; }
+    &:nth-child(4) { animation-delay: 0.8s; }
+    &:nth-child(5) { animation-delay: 1.0s; }
+    &:nth-child(6) { animation-delay: 1.2s; }
+    
+    &.strong {
+      font-weight: 600;
+      color: var(--primary-medium);
+      font-size: 1.5rem;
+      margin-bottom: 0;
+      
+      @media (max-width: 768px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+// Animație pentru conținutul principal
+.philosophy-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSequence {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Continue button styling - matching other sections
+.continue-section {
+  margin-top: 4rem;
+  
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+  }
+}
+
+.philosophy-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-medium), transparent);
+  margin: 3rem auto 2rem auto;
+  position: relative;
+  
+  .wisdom-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-medium);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: wisdomPulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes wisdomPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+.continue-btn {
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+  border: none;
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.1;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(143, 188, 143, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin: 2rem auto 0;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(143, 188, 143, 0.4);
+    
+    &::before {
+      left: 100%;
+    }
+    
+    .btn-arrow {
+      transform: translateX(5px);
+    }
+  }
+  
+  .btn-text {
+    font-family: var(--font-family-primary);
+  }
+  
+  .btn-arrow {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+  }
+}

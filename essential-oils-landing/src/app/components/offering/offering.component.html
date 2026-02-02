@@ -1,0 +1,72 @@
+<section class="offering">
+  <div class="sparkle-background">
+    <div class="sparkle-container">
+      <div class="sparkle" *ngFor="let spark of sparkleElements; let idx = index" 
+           [style.left.%]="spark.x" 
+           [style.top.%]="spark.y" 
+           [style.animation-delay.s]="spark.delay">
+        ✨
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="offering-content">
+      <div class="content-glow"></div>
+      
+      <h2 class="offering-title animate-title">
+        <span class="title-glow">Îți ofer:</span>
+      </h2>
+      
+      <div class="offering-list">
+        <div class="offering-item animate-item" [style.animation-delay]="'0.2s'">
+          <div class="item-icon">🌿</div>
+          <p><span class="highlight-word">informație clară</span>, testată, aplicabilă</p>
+        </div>
+        
+        <div class="offering-divider animated-divider"></div>
+        
+        <div class="offering-item animate-item" [style.animation-delay]="'0.4s'">
+          <div class="item-icon">⚡</div>
+          <p><span class="highlight-word">pași simpli</span>, pe care îi poți integra <em>acum</em>, nu „când vei avea timp"</p>
+        </div>
+        
+        <div class="offering-divider animated-divider"></div>
+        
+        <div class="offering-item animate-item" [style.animation-delay]="'0.6s'">
+          <div class="item-icon">💚</div>
+          <p><span class="highlight-word">sprijin real</span> pentru corp, nu stimulare care te amețește</p>
+        </div>
+        
+        <div class="offering-divider animated-divider"></div>
+        
+        <div class="offering-item animate-item" [style.animation-delay]="'0.8s'">
+          <div class="item-icon">🧘</div>
+          <p><span class="highlight-word">soluții care te centrează</span>, nu te agită</p>
+        </div>
+      </div>
+      
+      <div class="offering-promise animate-promise">
+        <p class="promise-text">
+          Nu promit rezultate fără implicare.
+        </p>
+        <p class="promise-text highlight">
+          <span class="promise-glow">Promit direcție, structură și instrumente care funcționează</span> atunci când le folosești.
+        </p>
+        <p class="promise-signature">
+          <span class="signature-shine">Real. Practic. Fără fum și oglinzi.</span>
+        </p>
+      </div>
+      
+      <div class="continue-section">
+        <div class="energy-divider">
+          <div class="energy-pulse"></div>
+        </div>
+        <button class="continue-btn vibrant-btn" (click)="scrollToNextSection()">
+          <span class="btn-text">Mai departe</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

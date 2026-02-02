@@ -1,0 +1,24 @@
+<section class="testimonials">
+  <div class="container">
+    <div class="testimonials-content">
+      <h2 class="testimonials-title">Experiențe reale</h2>
+      <p class="testimonials-subtitle">
+        Poveștile celor care au ales să-și asculte corpul și să îl sprijine cu grijă.
+      </p>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"{{ testimonial.text }}"</p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4 class="author-name">{{ testimonial.name }}</h4>
+                <span class="author-location">{{ testimonial.location }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

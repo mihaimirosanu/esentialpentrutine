@@ -1,0 +1,49 @@
+<section class="positioning">
+  <div class="animated-background">
+    <div class="floating-leaves">
+      <div class="leaf" *ngFor="let i of floatingElements; let idx = index" 
+           [style.left.%]="i.x" 
+           [style.top.%]="i.y" 
+           [style.animation-delay.s]="i.delay">
+        🌿
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="positioning-content">
+      <div class="content-backdrop"></div>
+      
+      <p class="positioning-text animate-text">
+        Nu îți promit miracole peste noapte.
+      </p>
+      <p class="positioning-text animate-text">
+        Îți propun ceva mult mai valoros:
+      </p>
+      <p class="positioning-text highlight animate-text">
+        <span class="highlight-glow"><b>transformări reale, vii, active,</b></span>
+        <br>care îți schimbă felul în care trăiești în corpul tău zi de zi.
+      </p>
+      <p class="positioning-text animate-text">
+        Nu îți cer să crezi în mine.
+      </p>
+      <p class="positioning-text animate-text">
+        Îți cer doar să fii atentă la tine.
+      </p>
+      <p class="positioning-text animate-text">
+        Să te observi.
+      </p>
+      <p class="positioning-text strong animate-text">
+        <span class="emphasis-shine">Să fii prezentă în viața ta.</span>
+      </p>
+      
+      <div class="continue-section">
+        <div class="section-divider"></div>
+        <button class="continue-btn" (click)="scrollToNextSection()">
+          <span class="btn-text">Continuă</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
