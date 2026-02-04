@@ -33,5 +33,5 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'essential-oils-landing';
+  title = 'Esential pentru tine';
 }

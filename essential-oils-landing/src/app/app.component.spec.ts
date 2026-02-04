@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'essential-oils-landing' title`, () => {
+  it(`should have the 'Esential pentru tine' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('essential-oils-landing');
+    expect(app.title).toEqual('Esential pentru tine');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, essential-oils-landing');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Esential pentru tine');
   });
 });
