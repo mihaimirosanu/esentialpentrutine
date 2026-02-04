@@ -17,14 +17,13 @@
   text-align: center;
   
   .vsl-intro {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.7;
     color: var(--text-primary);
     margin-bottom: 3rem;
     font-weight: 400;
     
     @media (max-width: 768px) {
-      font-size: 1.1rem;
       margin-bottom: 2.5rem;
     }
   }
@@ -58,15 +57,12 @@
 }
 
 .vsl-subtitle {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   color: var(--text-secondary);
   margin: 0;
   font-style: italic;
   
-  @media (max-width: 768px) {
-    font-size: 0.95rem;
-  }
   
   em {
     color: var(--primary-medium);

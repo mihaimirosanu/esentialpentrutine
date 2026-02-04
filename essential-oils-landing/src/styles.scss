@@ -19,7 +19,7 @@
   --neutral-dark: #2c2c2c;      // Dark gray
   
   // Text colors
-  --text-primary: #2F4F4F;      // Primary text color
+  --text-primary: #1b7c28;      // Primary text color
   --text-secondary: #7a7a7a;    // Secondary text color
   
   // Font families
@@ -27,7 +27,7 @@
   
   // Accent colors
   --accent-lavender: #b8a9d9;   // Calming lavender
-  --accent-sage: #9db5a0;       // Sage green
+  --accent-sage: #7dca86;       // Sage green
   
   // Spacing system
   --spacing-xs: 0.5rem;
@@ -69,7 +69,7 @@ html {
 
 body {
   font-family: var(--font-family-primary);
-  font-size: 1.1rem;
+  font-size: 2rem;
   line-height: 1.7;
   color: var(--neutral-dark);
   background-color: var(--neutral-white);
@@ -106,21 +106,21 @@ body {
 }
 
 .body-large {
-  font-size: 1.3rem;
+  font-size: 2rem;
   line-height: 1.6;
   color: var(--neutral-medium);
   margin-bottom: var(--spacing-sm);
 }
 
 .body-regular {
-  font-size: 1.2rem;
+  font-size: 2rem;
   line-height: 1.6;
   color: var(--neutral-medium);
   margin-bottom: var(--spacing-sm);
 }
 
 .body-small {
-  font-size: 0.875rem;
+  font-size: 2rem;
   line-height: 1.5;
   color: var(--neutral-medium);
 }

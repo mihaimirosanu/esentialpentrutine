@@ -27,13 +27,10 @@
   
   .sparkle {
     position: absolute;
-    font-size: 1rem;
+    font-size: 1.5rem;
     animation: sparkle 4s ease-in-out infinite;
     opacity: 0.4;
     
-    @media (max-width: 768px) {
-      font-size: 0.8rem;
-    }
   }
 }
 
@@ -125,13 +122,10 @@
     font-size: 1.5rem;
     animation: iconBounce 2s ease-in-out infinite;
     
-    @media (max-width: 768px) {
-      font-size: 1.3rem;
-    }
   }
   
   p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 2.1;
     letter-spacing: -0.01em;
     color: var(--text-primary);
@@ -156,9 +150,6 @@
       text-decoration-color: var(--primary-light);
     }
     
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-    }
   }
   
   @media (max-width: 768px) {
@@ -194,15 +185,12 @@
   }
   
   .promise-text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 2.2;
     letter-spacing: -0.01em;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
     
-    @media (max-width: 768px) {
-      font-size: 1.3rem;
-    }
     
     &.highlight {
       color: var(--primary-medium);
@@ -240,9 +228,6 @@
       animation: signatureShine 4s ease-in-out infinite;
     }
     
-    @media (max-width: 768px) {
-      font-size: 1.4rem;
-    }
   }
 }
 
