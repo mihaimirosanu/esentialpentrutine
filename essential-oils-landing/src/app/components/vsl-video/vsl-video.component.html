@@ -2,24 +2,31 @@
   <div class="container">
     <div class="vsl-content">
       <p class="vsl-intro">
-        Dacă vrei să înțelegi mai clar abordarea mea, te invit să urmărești acest mesaj.
+        Dacă vrei să înțelegi mai clar cum abordez lucrurile și ce înseamnă acest spațiu, te invit să urmărești acest mesaj.
       </p>
       
       <div class="video-wrapper">
-        <!-- Placeholder pentru VSL - voi adauga un sample video de pe YouTube -->
-        <iframe 
+        <video 
           class="video-player"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-          title="Mesajul meu despre abordarea holistică"
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen>
-        </iframe>
+          controls
+          preload="metadata"
+          poster="">
+          <source src="assets/video-esenitalpentrutine.mp4" type="video/mp4">
+          Browserul tău nu suportă redarea video-ului.
+        </video>
       </div>
       
       <p class="vsl-subtitle">
         <em>Dacă acest mesaj a pus în cuvinte ceva ce trăiai deja, următorul pas este o conversație.</em>
       </p>
+      
+      <div class="continue-section">
+        <div class="section-divider"></div>
+        <button class="continue-btn" (click)="scrollToNextSection()">
+          <span class="btn-text">Citește mai departe</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
     </div>
   </div>
 </section>

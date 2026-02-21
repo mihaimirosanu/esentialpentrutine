@@ -26,8 +26,7 @@ export class PhilosophyComponent implements OnInit {
   }
 
   scrollToNextSection() {
-    //const nextSection = document.querySelector('app-vsl-video');
-    const nextSection = document.querySelector('app-doterra-introduction');
+    const nextSection = document.querySelector('app-vsl-video');
     
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: 'smooth' });

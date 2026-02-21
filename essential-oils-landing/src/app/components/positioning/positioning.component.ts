@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,11 +8,45 @@ import { CommonModule } from '@angular/common';
   templateUrl: './positioning.component.html',
   styleUrl: './positioning.component.scss'
 })
-export class PositioningComponent implements OnInit {
+export class PositioningComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('profileImage') profileImage!: ElementRef;
+  
   floatingElements: Array<{x: number, y: number, delay: number}> = [];
+  private observer!: IntersectionObserver;
 
   ngOnInit() {
     this.generateFloatingElements();
+  }
+
+  ngAfterViewInit() {
+    this.setupIntersectionObserver();
+  }
+
+  ngOnDestroy() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
+
+  setupIntersectionObserver() {
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add zoom-in class when element comes into view
+            setTimeout(() => {
+              entry.target.classList.add('zoom-in');
+            }, 300); // Small delay for better effect
+          }
+        });
+      }, {
+        threshold: 0.3 // Trigger when 30% of the element is visible
+      });
+
+      if (this.profileImage) {
+        this.observer.observe(this.profileImage.nativeElement);
+      }
+    }
   }
 
   generateFloatingElements() {

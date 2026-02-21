@@ -14,7 +14,14 @@
     <div class="positioning-content">
       <div class="content-backdrop"></div>
       
-      <p class="positioning-text animate-text">
+      <div class="profile-image-container">
+        <div class="profile-image" #profileImage>
+          <img src="assets/images/profil tiktok.jpeg" alt="Profil" class="profile-photo">
+        </div>
+      </div>
+      
+      <div class="text-content">
+        <p class="positioning-text animate-text">
         Nu îți promit miracole peste noapte.
       </p>
       <p class="positioning-text animate-text">
@@ -37,12 +44,13 @@
         <span class="emphasis-shine">Să fii prezentă în viața ta.</span>
       </p>
       
-      <div class="continue-section">
-        <div class="section-divider"></div>
-        <button class="continue-btn" (click)="scrollToNextSection()">
-          <span class="btn-text">Continuă</span>
-          <span class="btn-arrow">→</span>
-        </button>
+        
+        <div class="continue-section">
+          <button class="continue-btn" (click)="scrollToNextSection()">
+            <span class="btn-text">Continuă</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
